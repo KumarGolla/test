@@ -3,19 +3,8 @@
   sudo: yes
   hosts: dockerswarm
   vars:
-   ansible_ssh_private_key_file: "/home/ec2-user/Lab-2.pem"
-  tasks:
-   - name: run files
-     copy:
-      src: /home/ec2-user/deploy.yml
-      dest: /root/
-      mode: u=rwx,g=rwx,o=rwx
-   - name: run files
-     copy:
-      src: /home/ec2-user/ani.yml
-      dest: /root/
-      mode: u=rwx,g=rwx,o=rwx
-   - name: remove crules stacks
+   ansible_ssh_private_key_file: "/var/lib/jenkins/workspace/prem/Lab-2.pem"
+   - name: follow my commands 
      command: docker stack rm pig
    - pause:
       seconds: 20
