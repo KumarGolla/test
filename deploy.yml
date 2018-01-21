@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  prem:
+    image: helloworld:latest
+    ports: 
+      - 5000:5000
+    deploy:
+      replicas: 3
